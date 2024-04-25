@@ -28,9 +28,9 @@ const BackgroundParticles = () => {
             loaded={particlesLoaded}
             options={{
                 background: {
-                    color: {
-                        value: "#0d47a100",
-                    },
+                    // color: {
+                    //     // value: "#0e87a1",
+                    // },
                 },
                 fpsLimit: 120,
                 interactivity: {
@@ -57,7 +57,12 @@ const BackgroundParticles = () => {
                 },
                 particles: {
                     color: {
-                        value: "#ffffff",
+                        value: [
+                            "#ffffff", 
+                            '#ff0000', 
+                            '00ff00',
+                            '0000ff'
+                        ],
                     },
                     links: {
                         color: "#ffffff",

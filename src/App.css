@@ -7,6 +7,21 @@
 .holidayParticles {
   background-color: black;
   /* position: relative; */
+  width: 100vw;
+  height: 100vh;
+}
+
+.Christmas, .Halloween {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Christmas {
+  background-image: url('./Photos//hotCocoa.jpg');
+}
+.Halloween {
+  background-image: url('./Photos/moonWitch.jpg');
 }
 
 .backgroundParticles {
@@ -25,7 +40,7 @@
 
 }
 
-.content {
+.clock {
   position: relative;
   /* z-index: 1;  */
   color: white
