@@ -9,6 +9,9 @@
   /* position: relative; */
   width: 100vw;
   height: 100vh;
+
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 .Christmas, .Halloween {
@@ -34,14 +37,33 @@
 
 .header {
   color: white;
+  background-color: #000000aa;
   position: relative;
   border: 2px solid red;
   z-index: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  /* flex: 1; */
+  height: 10vh;
+}
+.doorImage {
+  border: 2px solid blue;
+  height: 70px;
+  width: auto;
+}
 
+
+
+
+
+
+.holidayDisplay {
+  border: 2px solid magenta;
+  display: flex;
+  flex: 1;
 }
 
 .clock {
-  position: relative;
-  /* z-index: 1;  */
+  border: 2px solid blue;
   color: white
 }

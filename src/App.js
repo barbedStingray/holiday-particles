@@ -16,13 +16,16 @@ function App() {
   return (
     <div className={`holidayParticles ${holiday}`}>
 
-      <Header setHoliday={setHoliday} setHolidate={setHolidate}/>
+      <Header setHoliday={setHoliday} setHolidate={setHolidate} />
 
       <div className='backgroundParticles'>
         <BackgroundParticles />
       </div>
 
-      <Clock holiday={holiday} holidate={holidate}/>
+      {/* <div className={`holidayDisplay ${holiday}`}> */}
+      <div className={`holidayDisplay`}>
+        <Clock holiday={holiday} holidate={holidate} />
+      </div>
 
     </div>
   );

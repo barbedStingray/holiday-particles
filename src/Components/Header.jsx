@@ -1,31 +1,39 @@
 import React, { useEffect } from 'react';
 
+import ChristmasDoor from '../Photos/christmasDoor.png';
+import HalloweenDoor from '../Photos/halloweenDoor.png';
+import PatricksDoor from '../Photos/patricksDoor.png';
+
 const Header = ({ setHoliday, setHolidate }) => {
 
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
   const nextYear = currentYear + 1;
   const holidayList = [
-    {
-      name: 'Bens Birthday',
-      date: `May 7, ${currentYear} 00:00:00`,
-    },
+    // {
+    //   name: 'Bens Birthday',
+    //   date: `May 7, ${currentYear} 00:00:00`,
+    // },
     {
       name: 'St. Patricks Day',
       date: `March 17, ${currentYear} 00:00:00`,
+      door: PatricksDoor,
     },
+    // christmas throws an error for some reason
     {
       name: 'Christmas',
       date: `December 25, ${currentYear} 00:00:00`,
+      door: ChristmasDoor,
     },
     {
       name: 'Halloween',
       date: `October 31, ${currentYear} 00:00:00`,
+      door: HalloweenDoor,
     },
-    {
-      name: 'New Years Eve',
-      date: `January 1, ${nextYear} 00:00:00`,
-    },
+    // {
+    //   name: 'New Years Eve',
+    //   date: `January 1, ${nextYear} 00:00:00`,
+    // },
   ];
 
   function checkIfDateHasPassed(dateString) {
@@ -58,10 +66,13 @@ useEffect(() => {
 
       {holidayList.map((holiday, i) => (
         <div key={i} onClick={() => changeHoliday(holiday.name, holiday.date)}>
-          {holiday.name}
+          <img 
+            className='doorImage' 
+            alt='NBC Door Image'
+            src={holiday.door}
+          />
         </div>
       ))}
-      <h1>Header</h1>
     </div>
   )
 }
