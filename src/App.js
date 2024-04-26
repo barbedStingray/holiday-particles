@@ -205,7 +205,7 @@ function App() {
             },
             modes: {
                 grab: {
-                    distance: 200,
+                    distance: 350,
                     // links: {
                     //     color: "#ffffff",
                     //     enable: true,
@@ -241,7 +241,7 @@ function App() {
                 },
             },
             number: {
-                value: 250,
+                value: 200,
                 density: {
                     enable: true,
                     value_area: 1000,
