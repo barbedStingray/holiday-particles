@@ -27,8 +27,8 @@ function App() {
                     mode: "push",
                 },
                 onHover: {
-                    enable: false,
-                    mode: "grab",
+                    enable: true,
+                    mode: "repulse",
                 },
             },
             modes: {
@@ -86,6 +86,106 @@ function App() {
             },
             size: {
                 value: 7,
+                random: true,
+                anim: {
+                    enable: false,
+                    speed: 30,
+                    size_min: 1,
+                    sync: true,
+                },
+            },
+        },
+        detectRetina: true,
+    }
+    const valentineParticles = {
+        background: {
+            // color: {
+            //     // value: "#0e87a1",
+            // },
+        },
+        fpsLimit: 120,
+        interactivity: {
+            events: {
+                resize: true,
+                onClick: {
+                    enable: false,
+                    mode: "push",
+                },
+                onHover: {
+                    enable: true,
+                    mode: "bubble",
+                    parallax: {
+                        enable: false,
+                        force: 2,
+                        smooth: 10,
+                    },
+                },
+            },
+            modes: {
+                bubble: {
+                    distance: 200,
+                    size: 40,
+                    duration: 10,
+                    opacity: 0.6,
+                    color: [
+                        "#ff0000",
+                        "#ffc0cb",
+                        "#fff",
+                    ],
+                    position: {
+                        x: 0,
+                        y: 0,
+                    },
+                },
+            },
+        },
+        particles: {
+            color: {
+                value: [
+                    "#ffffff",
+                ],
+            },
+            links: {
+                color: "#ffffff",
+                distance: 150,
+                enable: false,
+                opacity: 0.5,
+                width: 1,
+            },
+            move: {
+                enable: true,
+                direction: "top",
+                speed: {
+                    min: 2,
+                    max: 5,
+                },
+                random: false,
+                straight: false,
+                out_mode: "out", // default bounce
+                attract: {
+                    enable: false,
+                    rotateX: 600,
+                    rotateY: 1200,
+                },
+            },
+            number: {
+                value: 80,
+                density: {
+                    enable: true,
+                    value_area: 800,
+                },
+            },
+            opacity: {
+                value: 0.5,
+            },
+            shape: {
+                type: "circle", // * star, circle
+            },
+            size: {
+                value: {
+                    min: 2,
+                    max: 6,
+                },
                 random: true,
                 anim: {
                     enable: false,
@@ -272,7 +372,7 @@ function App() {
     }
 
     function determineParticles(holiday) {
-        switch(holiday) {
+        switch (holiday) {
             case 'Christmas':
                 setParticles(christmasParticles);
                 break;
@@ -282,9 +382,12 @@ function App() {
             case 'Independence Day':
                 setParticles(independenceParticles);
                 break;
+            case 'Valentines Day':
+                setParticles(valentineParticles);
+                break;
             default:
                 setParticles({});
-            }   
+        }
     }
     useEffect(() => {
         determineParticles(holiday);
@@ -295,7 +398,7 @@ function App() {
     return (
         <div className={`holidayParticles ${holiday}`}>
 
-            <Header setHoliday={setHoliday} setHolidate={setHolidate}/>
+            <Header setHoliday={setHoliday} setHolidate={setHolidate} />
 
             <div className='backgroundParticles'>
                 <BackgroundParticles particles={particles} />
