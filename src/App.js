@@ -184,11 +184,100 @@ function App() {
         },
         detectRetina: true,
     }
+    const halloweenParticles = {
+        background: {
+            // color: {
+            //     // value: "#0e87a1",
+            // },
+        },
+        fpsLimit: 120,
+        interactivity: {
+            events: {
+                resize: true,
+                onClick: {
+                    enable: true,
+                    mode: "push",
+                },
+                onHover: {
+                    enable: true,
+                    mode: "grab",
+                },
+            },
+            modes: {
+                grab: {
+                    distance: 200,
+                    // links: {
+                    //     color: "#ffffff",
+                    //     enable: true,
+                    //     opacity: 0.8,
+                    //     width: 3,
+                    // }
+                },
+            },
+        },
+        particles: {
+            color: {
+                value: [
+                    "#ffffff",
+                ],
+            },
+            links: {
+                color: "#ffffff",
+                // enable: false,
+                opacity: 0.5,
+                width: 1,
+            },
+            move: {
+                enable: false,
+                direction: "default",
+                speed: 3,
+                random: false,
+                straight: false,
+                out_mode: "bounce", // default bounce
+                attract: {
+                    enable: false,
+                    rotateX: 600,
+                    rotateY: 1200,
+                },
+            },
+            number: {
+                value: 250,
+                density: {
+                    enable: true,
+                    value_area: 1000,
+                },
+            },
+            opacity: {
+                value: 0.0,
+            },
+            shape: {
+                type: "star", // * star, circle
+                // type: "image",
+                // src: HalloweenDoor,
+                // width: 100,
+                // height: 100,
+            },
+            // size: {
+            //     value: 6,
+            //     random: true,
+            //     anim: {
+            //         enable: true,
+            //         speed: 20,
+            //         size_min: 1,
+            //         sync: true,
+            //     },
+            // },
+        },
+        detectRetina: true,
+    }
 
     function determineParticles(holiday) {
         switch(holiday) {
             case 'Christmas':
                 setParticles(christmasParticles);
+                break;
+            case 'Halloween':
+                setParticles(halloweenParticles);
                 break;
             case 'Independence Day':
                 setParticles(independenceParticles);
