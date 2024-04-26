@@ -116,7 +116,7 @@ const Header = ({ setHoliday, setHolidate }) => {
   }
 
   function changeHoliday(newName, newDate) {
-    console.log('newHoliday', newName, newDate);
+    // console.log('newHoliday', newName, newDate);
     setHoliday(newName);
     setHolidate(newDate);
   }

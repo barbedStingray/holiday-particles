@@ -87,26 +87,26 @@ const Clock = ({ holiday, holidate }) => {
   return (
     <div className="clock">
       <div className='holidayTitle'>
-        <h1>{holiday}</h1>
+        <p>{holiday}</p>
       </div>
 
 
       <div className='clockDisplay'>
         <div className='timeBlock'>
-          <h2 className='unit'>Days</h2>
-          <h3 className='time'>{timerDays}</h3>
+          <p className='unit'>Days</p>
+          <p className='time'>{timerDays}</p>
         </div>
         <div className='timeBlock'>
-          <h2 className='unit'>Hrs</h2>
-          <h3 className='time'>{timerHours}</h3>
+          <p className='unit'>Hrs</p>
+          <p className='time'>{timerHours}</p>
         </div>
         <div className='timeBlock'>
-          <h2 className='unit'>Min.</h2>
-          <h3 className='time'>{timerMinutes}</h3>
+          <p className='unit'>Min.</p>
+          <p className='time'>{timerMinutes}</p>
         </div>
         <div className='timeBlock'>
-          <h2 className='unit'>Sec'</h2>
-          <h3 className='time'>{timerSeconds}</h3>
+          <p className='unit'>Sec'</p>
+          <p className='time'>{timerSeconds}</p>
         </div>
       </div>
 
