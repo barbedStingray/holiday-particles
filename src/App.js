@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import { useState } from 'react';
 import './App.css';
 import BackgroundParticles from './Components/BackgroundParticles';
@@ -22,10 +21,7 @@ function App() {
         <BackgroundParticles />
       </div>
 
-      {/* <div className={`holidayDisplay ${holiday}`}> */}
-      <div className={`holidayDisplay`}>
-        <Clock holiday={holiday} holidate={holidate} />
-      </div>
+      <Clock holiday={holiday} holidate={holidate} />
 
     </div>
   );

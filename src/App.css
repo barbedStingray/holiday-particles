@@ -4,27 +4,73 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: valentine;
+  src: url('./Fonts/honeyValentine.ttf')
+}
+
+@font-face {
+  font-family: halloween;
+  src: url('./Fonts/octoberCrow.ttf')
+}
+
+@font-face {
+  font-family: thanksgiving;
+  src: url('./Fonts/FallHarvest.ttf')
+}
+
+@font-face {
+  font-family: christmas;
+  src: url('./Fonts/Christmas.ttf')
+}
+
 .holidayParticles {
   background-color: black;
   /* position: relative; */
   width: 100vw;
   height: 100vh;
-
   display: flex;
   flex-flow: column nowrap;
+  color: white;
+  -webkit-text-stroke: 0.2px black;
+
 }
 
-.Christmas, .Halloween {
+.Christmas,
+.Halloween,
+.Thanksgiving,
+.Valentines {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .Christmas {
-  background-image: url('./Photos//hotCocoa.jpg');
+  background-image: url('./Photos/hotCocoa.jpg');
+  font-family: christmas;
+  color: red;
+  text-shadow: 0 0px 20px white;
 }
+
 .Halloween {
-  background-image: url('./Photos/moonWitch.jpg');
+  background-image: url('./Photos/moonWitch1.jpg');
+  font-family: halloween;
+  color: rgb(221, 255, 0);
+  /* color: orange; */
+  text-shadow: 0 0px 20px black;
+}
+
+.Thanksgiving {
+  background-image: url('./Photos/thanksgiving1.jpg');
+  font-family: thanksgiving;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0px 20px rgb(107, 16, 16);
+}
+.Valentines {
+  background-image: url('./Photos/thanksgiving1.jpg');
+  font-family: valentine;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0px 20px rgb(107, 16, 16);
 }
 
 .backgroundParticles {
@@ -37,33 +83,81 @@
 
 .header {
   color: white;
-  background-color: #000000aa;
+  /* background-color: #000000aa; */
   position: relative;
   border: 2px solid red;
   z-index: 1;
   display: flex;
   flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3vh;
+  gap: 4vh;
   /* flex: 1; */
-  height: 10vh;
+  height: 12vh;
 }
+
 .doorImage {
-  border: 2px solid blue;
-  height: 70px;
+  border: 2px solid black;
+  height: 10vh;
   width: auto;
+  box-shadow: 0 0 10px black;
 }
 
 
 
 
 
-
-.holidayDisplay {
-  border: 2px solid magenta;
-  display: flex;
-  flex: 1;
-}
 
 .clock {
+  border: 2px solid magenta;
+  /* color: white; */
+  display: flex;
+  flex-flow: column nowrap;
+  /* flex: 1; */
+  height: 75vh;
+  margin-top: 3vh;
+  /* margin-left: 5vw; */
+  /* padding-top: 15vh; */
+  /* justify-content: center; */
+  align-items: flex-start;
+  /* z-index: 1; */
+
+}
+
+.holidayTitle {
   border: 2px solid blue;
-  color: white
+  width: 100%;
+  height: 20vh;
+  font-size: 7vh;
+  margin-left: 5vw;
+}
+
+.clockDisplay {
+  border: 2px solid green;
+  margin: 5vh 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.timeBlock {
+  /* border: 2px solid orange; */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+}
+
+.unit {
+  /* border: 2px solid red; */
+  font-size: 7vh;
+}
+
+.time {
+  /* border: 2px solid white; */
+  font-size: 12vh;
 }
