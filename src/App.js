@@ -3,6 +3,7 @@ import './App.css';
 import BackgroundParticles from './Components/BackgroundParticles';
 import Header from './Components/Header';
 import Clock from './Components/Clock';
+import StingrayLogo from './Photos/LBlueIcon.png';
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
     const [holiday, setHoliday] = useState('Halloween');
     const [holidate, setHolidate] = useState('');
     const [particles, setParticles] = useState({});
+
 
     const christmasParticles = {
         background: {
@@ -262,7 +264,7 @@ function App() {
                 },
             },
             opacity: {
-                value: 0.5,
+                value: 0.6,
             },
             shape: {
                 type: "star", // * star, circle
@@ -564,6 +566,203 @@ function App() {
         },
         detectRetina: true,
     }
+    const benConfetti = {
+        background: {
+            // color: {
+            //     // value: "#0e87a1",
+            // },
+        },
+        fpsLimit: 120,
+        interactivity: {
+            // detectsOn: "window",
+            events: {
+                resize: {
+                    enable: true,
+                    delay: 0.5,
+                },
+                onHover: {
+                    enable: true,
+                    mode: "repulse",
+                },
+            },
+            modes: {
+                push: {
+                    quantity: 4,
+                },
+                repulse: {
+                    distance: 150,
+                    duration: 0.4,
+                },
+            },
+        },
+        particles: {
+            color: {
+                value: ["#1E00FF", "#FF0061", "#E1FF00", "#00FF9E"]
+            },
+            links: {
+                color: "#ffffff",
+                distance: 150,
+                enable: false,
+                opacity: 0.5,
+                width: 1,
+            },
+            move: {
+                // angle: {
+                //     offset: 0,
+                //     value: 90,
+                // },
+                // center: {
+                //     x: 50,
+                //     y: 50,
+                //     mode: "percent",
+                //     radius: 0,
+                // },
+                decay: {
+                    min: 0.05,
+                    max: 0.15
+                },
+                enable: true,
+                direction: "top",
+                gravity: {
+                    acceleration: 9.81,
+                    enable: true,
+                    inverse: false,
+                    maxSpeed: 200,
+                },
+
+                outModes: {
+                    default: "destroy",
+                    bottom: "destroy",
+                    left: "destroy",
+                    right: "destroy",
+                    top: "none"
+                },
+                random: false,
+                speed: {
+                    min: 20,
+                    max: 150
+                },
+            },
+            number: {
+                value: 350,
+                density: {
+                    enable: false,
+                    value_area: 800,
+                },
+            },
+
+            // opacity: {
+            //     value: 1,
+            //     animation: {
+            //         enable: false
+            //     }
+            // },
+            reduceDuplicates: false,
+            shape: {
+                type: ["triangle", "square", "star"],
+            },
+            size: {
+                value: {
+                    min: 2,
+                    max: 4,
+                },
+                random: true,
+            },
+            rotate: {
+                value: {
+                    min: 0,
+                    max: 360,
+                },
+                animation: {
+                    enable: false
+                }
+            },
+            // roll: {
+            //     // darken: {
+            //     //     enable: true,
+            //     //     value: 30
+            //     // },
+            //     enable: false,
+            //     enlighten: {
+            //         enable: true,
+            //         value: 30
+            //     },
+            //     mode: "both",
+            //     speed: {
+            //         min: 15,
+            //         max: 25
+            //     }
+            // },
+            // tilt: {
+            //     value: {
+            //         min: 0,
+            //         max: 360
+            //     },
+            //     animation: {
+            //         enable: true,
+            //         speed: 60,
+            //         decay: 0,
+            //         sync: false
+            //     },
+            //     direction: "random",
+            //     enable: true
+            // },
+            wobble: {
+                distance: 30,
+                enable: true,
+                speed: {
+                    angle: {
+                        min: -15,
+                        max: 15
+                    },
+                    move: 10
+                }
+            },
+            rotate: {
+                value: {
+                    min: 0,
+                    max: 360
+                },
+                animation: {
+                    enable: true,
+                    speed: 60,
+                    decay: 0,
+                    sync: false
+                },
+                direction: "random",
+                path: false
+            },
+
+
+        },
+        pauseOnBlur: true,
+        pauseOnOutsideViewport: true,
+        emitters: {
+            autoPlay: true,
+            fill: true,
+            life: {
+                wait: true,
+            },
+            rate: {
+                quantity: 100, // Adjust the emission rate as needed
+                delay: 62.05
+            },
+            shape: {
+                type: "square"
+            },
+            startCount: 0,
+            size: {
+                mode: "percent",
+                height: 0,
+                width: 0
+            },
+            position: {
+                x: 50,
+                y: 100
+            }
+        },
+        detectRetina: true,
+    }
 
 
 
@@ -587,6 +786,9 @@ function App() {
             case 'Valentines Day':
                 setParticles(valentineParticles);
                 break;
+            case 'Bens Birthday':
+                setParticles(benConfetti);
+                break;
             default:
                 setParticles({});
         }
@@ -607,6 +809,7 @@ function App() {
             </div>
 
             <Clock holiday={holiday} holidate={holidate} />
+
 
         </div>
     );

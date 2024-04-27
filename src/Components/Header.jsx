@@ -6,6 +6,7 @@ import PatricksDoor from '../Photos/patricksDoor.png';
 import ValentinesDoor from '../Photos/valentineDoor.png';
 import ThanksgivingDoor from '../Photos/thanksgivingDoor.png';
 import IndependenceDoor from '../Photos/independenceDoor.png';
+import StingrayLogo from '../Photos/LBlueIcon.png';
 
 const Header = ({ setHoliday, setHolidate }) => {
 
@@ -43,6 +44,11 @@ const Header = ({ setHoliday, setHolidate }) => {
       date: `December 25, ${currentYear} 00:00:00`,
       door: ChristmasDoor,
     },
+    {
+      name: 'Bens Birthday',
+      date: `May 7, ${currentYear} 00:00:00`,
+    },
+
   ];
   // const holidayList = [
   //   {
@@ -99,6 +105,7 @@ const Header = ({ setHoliday, setHolidate }) => {
     }
   });
 
+
   // calculate Thanksgiving - 4th thursday of November
   function calculateThanksgivingDate(year) {
     // console.log('THANKSGIVING', year);
@@ -121,25 +128,34 @@ const Header = ({ setHoliday, setHolidate }) => {
     setHolidate(newDate);
   }
 
-useEffect(() => {
-  setHoliday(`${doorHolidays[0].name}`);
-  setHolidate(`${doorHolidays[0].date}`);
-}, []);
+  useEffect(() => {
+    setHoliday(`${doorHolidays[0].name}`);
+    setHolidate(`${doorHolidays[0].date}`);
+  }, []);
 
 
   return (
-    <div className='header'>
-
-      {doorHolidays.map((holiday, i) => (
-        <div key={i} onClick={() => changeHoliday(holiday.name, holiday.date)}>
-          <img 
-            className='doorImage' 
-            alt='NBC Door Image'
-            src={holiday.door}
-          />
-        </div>
-      ))}
-    </div>
+    <>
+      <div className='header'>
+        {doorHolidays.map((holiday, i) => (
+          <div key={i} onClick={() => changeHoliday(holiday.name, holiday.date)}>
+            {holiday.door && (
+              <img
+                className='doorImage'
+                alt='NBC Door Image'
+                src={holiday.door}
+              />
+            )}
+          </div>
+        ))}
+      </div>
+      
+      <img
+        onClick={() => changeHoliday(doorHolidays[doorHolidays.length - 1].name, doorHolidays[doorHolidays.length - 1].date)}
+        alt='stingrayLogo'
+        src={StingrayLogo}
+        className='stingrayLogo' />
+    </>
   )
 }
 

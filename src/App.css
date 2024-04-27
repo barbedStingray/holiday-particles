@@ -32,6 +32,20 @@
   src: url('./Fonts/irishUNCI.ttf')
 }
 
+.stingrayLogo {
+  /* border: 2px solid gold; */
+  width: 8vh;
+  height: 8vh;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  transition: 0.3s;
+  z-index: 2;
+}
+.stingrayLogo:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
 .holidayParticles {
   background-color: black;
   /* position: relative; */
@@ -94,6 +108,9 @@
   text-shadow: 0 0px 10px black;
   -webkit-text-stroke: 0.5px black;
 }
+.Birthday {
+  /* background-color: blue; */
+}
 
 .backgroundParticles {
   position: absolute;
@@ -125,9 +142,11 @@
   height: 10vh;
   width: auto;
   box-shadow: 0 0 10px black;
+  transition: 0.3s;
+
 }
 .doorImage:hover {
-  rotate: 10px;
+  transform: rotate(12deg) scale(1.1);
 }
 
 
