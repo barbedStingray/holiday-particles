@@ -27,6 +27,10 @@
   font-family: christmas;
   src: url('./Fonts/homeChristmas.otf')
 }
+@font-face {
+  font-family: patricks;
+  src: url('./Fonts/irishUNCI.ttf')
+}
 
 .holidayParticles {
   background-color: black;
@@ -42,7 +46,8 @@
 .Halloween,
 .Thanksgiving,
 .Valentines,
-.Independence {
+.Independence,
+.Patricks {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -82,6 +87,13 @@
   font-family: independence;
   color: white;
 }
+.Patricks {
+  background-image: url('./Photos/coverFiield.jpg');
+  font-family: patricks;
+  color: gold;
+  text-shadow: 0 0px 10px black;
+  -webkit-text-stroke: 0.5px black;
+}
 
 .backgroundParticles {
   position: absolute;
@@ -89,14 +101,15 @@
   height: 100%;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 
 .header {
   color: white;
   /* background-color: #000000aa; */
   position: relative;
-  border: 2px solid red;
-  z-index: 1;
+  /* border: 2px solid red; */
+  z-index: 3;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -113,6 +126,9 @@
   width: auto;
   box-shadow: 0 0 10px black;
 }
+.doorImage:hover {
+  rotate: 10px;
+}
 
 
 
@@ -120,35 +136,39 @@
 
 
 .clock {
-  border: 2px solid magenta;
+  /* border: 2px solid magenta; */
   /* color: white; */
   display: flex;
   flex-flow: column nowrap;
   /* flex: 1; */
-  height: 60vh;
+  height: 70vh;
   margin-top: 6vh;
   /* margin-left: 5vw; */
   /* padding-top: 15vh; */
   /* justify-content: center; */
   align-items: flex-start;
-  /* z-index: 1; */
+  z-index: 0;
 
 }
 
 .holidayTitle {
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   width: 100%;
   height: 20vh;
   font-size: 12vh;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .clockDisplay {
   border: 2px solid green;
   margin: 5vh 0;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-evenly;
+  flex-flow: row wrap;
+  gap: 2vh;
+  justify-content: center;
   align-items: center;
   width: 100%;
 }
@@ -159,7 +179,7 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  width: 20vw;
+  width: 200px;
 }
 
 .unit {
@@ -183,5 +203,36 @@
     #ffffff33, 95%, #ffffff11, 96%,
     #ffffff01);
     box-shadow: 0 0 10px white; */
+}
+
+
+
+
+@media (max-width: 425px) {
+  .header {
+    /* border: 2px solid red; */
+    margin-top: 1vh;
+    gap: 2.5vw;
+    height: 11vh;
+  }
+  .clock {
+    /* border: 2px solid magenta; */
+    flex: 1;
+    /* flex: 1; */
+    margin-top: 4vh;  
+  }
+  .holidayTitle {
+    border: 2px solid blue;
+    width: 100%;
+    height: 20vh;
+    font-size: 18vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  
 }
 

@@ -44,41 +44,41 @@ const Header = ({ setHoliday, setHolidate }) => {
       door: ChristmasDoor,
     },
   ];
-  const holidayList = [
-    {
-      name: 'Bens Birthday',
-      date: `May 7, ${currentYear} 00:00:00`,
-    },
-    {
-      name: 'Valentines Day',
-      date: `February 14, ${currentYear} 00:00:00`,
-    },
-    {
-      name: 'St. Patricks Day',
-      date: `March 17, ${currentYear} 00:00:00`,
-    },
-    {
-      name: 'Independence Day',
-      date: `July 4, ${currentYear} 00:00:00`,
-    },
-    {
-      name: 'Halloween',
-      date: `October 31, ${currentYear} 00:00:00`,
-    },
-    {
-      name: 'Thanksgiving',
-      date: calculateThanksgivingDate(currentYear),
-    },
-    // ? christmas throws an error for some reason when first
-    {
-      name: 'Christmas',
-      date: `December 25, ${currentYear} 00:00:00`,
-    },
-    {
-      name: 'New Years Eve',
-      date: `January 1, ${nextYear} 00:00:00`,
-    },
-  ];
+  // const holidayList = [
+  //   {
+  //     name: 'Bens Birthday',
+  //     date: `May 7, ${currentYear} 00:00:00`,
+  //   },
+  //   {
+  //     name: 'Valentines Day',
+  //     date: `February 14, ${currentYear} 00:00:00`,
+  //   },
+  //   {
+  //     name: 'St. Patricks Day',
+  //     date: `March 17, ${currentYear} 00:00:00`,
+  //   },
+  //   {
+  //     name: 'Independence Day',
+  //     date: `July 4, ${currentYear} 00:00:00`,
+  //   },
+  //   {
+  //     name: 'Halloween',
+  //     date: `October 31, ${currentYear} 00:00:00`,
+  //   },
+  //   {
+  //     name: 'Thanksgiving',
+  //     date: calculateThanksgivingDate(currentYear),
+  //   },
+  //   // ? christmas throws an error for some reason when first
+  //   {
+  //     name: 'Christmas',
+  //     date: `December 25, ${currentYear} 00:00:00`,
+  //   },
+  //   {
+  //     name: 'New Years Eve',
+  //     date: `January 1, ${nextYear} 00:00:00`,
+  //   },
+  // ];
 
   function checkIfDateHasPassed(dateString) {
     const holidayDate = new Date(dateString);
@@ -86,12 +86,12 @@ const Header = ({ setHoliday, setHolidate }) => {
       return true;
     }
   }
-  holidayList.forEach(holiday => {
-    if (checkIfDateHasPassed(holiday.date)) {
-      // console.log('passed holiday date', holiday.date)
-      holiday.date = holiday.date.replace(currentYear, nextYear);
-    }
-  });
+  // holidayList.forEach(holiday => {
+  //   if (checkIfDateHasPassed(holiday.date)) {
+  //     // console.log('passed holiday date', holiday.date)
+  //     holiday.date = holiday.date.replace(currentYear, nextYear);
+  //   }
+  // });
   doorHolidays.forEach(holiday => {
     if (checkIfDateHasPassed(holiday.date)) {
       // console.log('passed holiday date', holiday.date)
@@ -122,8 +122,8 @@ const Header = ({ setHoliday, setHolidate }) => {
   }
 
 useEffect(() => {
-  setHoliday(`${holidayList[0].name}`);
-  setHolidate(`${holidayList[0].date}`);
+  setHoliday(`${doorHolidays[0].name}`);
+  setHolidate(`${doorHolidays[0].date}`);
 }, []);
 
 
