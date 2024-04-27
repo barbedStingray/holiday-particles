@@ -8,6 +8,10 @@
   font-family: valentine;
   src: url('./Fonts/Filxgirl.TTF')
 }
+@font-face {
+  font-family: independence;
+  src: url('./Fonts/fireworksKid.ttf')
+}
 
 @font-face {
   font-family: halloween;
@@ -16,12 +20,12 @@
 
 @font-face {
   font-family: thanksgiving;
-  src: url('./Fonts/FallHarvest.ttf')
+  src: url('./Fonts/almondLatte.ttf')
 }
 
 @font-face {
   font-family: christmas;
-  src: url('./Fonts/Christmas.ttf')
+  src: url('./Fonts/homeChristmas.otf')
 }
 
 .holidayParticles {
@@ -45,13 +49,12 @@
 }
 
 .Christmas {
-  background-image: url('./Photos/hotCocoa.jpg');
+  background-image: url('./Photos/iceCrystal.jpg');
   font-family: christmas;
   color: red;
-  text-shadow: 0 0px 20px #ffffff;
+  text-shadow: 0 0px 10px black;
   -webkit-text-stroke: 0.2px black;
 }
-
 .Halloween {
   background-image: url('./Photos/moonWitch1.jpg');
   font-family: halloween;
@@ -60,26 +63,24 @@
   text-shadow: 0 0px 20px black;
   -webkit-text-stroke: 0.3px black;
 }
-
 .Thanksgiving {
-  background-image: url('./Photos/thanksgiving1.jpg');
+  background-image: url('./Photos/autumnTable.jpg');
   font-family: thanksgiving;
-  color: rgb(255, 255, 255);
-  text-shadow: 0 0px 20px #6b1010;
-  -webkit-text-stroke: 0.1px black;
+  color: white;
+  text-shadow: 0 0px 20px black;
+  -webkit-text-stroke: 0.75px black;
 }
 .Valentines {
   background-image: url('./Photos/valentineHearts.jpg');
   font-family: valentine;
-  color: purple;
+  color: #840a84;
   text-shadow: 0 0px 10px pink;
   -webkit-text-stroke: 0.5px black;
 }
 .Independence {
   background-image: url('./Photos/julyFirework.jpg');
-  /* font-family: valentine; */
-  color: red;
-  text-shadow: 0 0px 10px white;
+  font-family: independence;
+  color: white;
 }
 
 .backgroundParticles {
@@ -124,8 +125,8 @@
   display: flex;
   flex-flow: column nowrap;
   /* flex: 1; */
-  height: 75vh;
-  margin-top: 3vh;
+  height: 60vh;
+  margin-top: 6vh;
   /* margin-left: 5vw; */
   /* padding-top: 15vh; */
   /* justify-content: center; */

@@ -169,7 +169,7 @@ function App() {
                 },
             },
             number: {
-                value: 80,
+                value: 100,
                 density: {
                     enable: true,
                     value_area: 800,
@@ -218,7 +218,8 @@ function App() {
             },
             modes: {
                 push: {
-                    quantity: 4,
+                    quantity: 8,
+                    speed: 5,
                 },
                 repulse: {
                     distance: 150,
@@ -244,7 +245,7 @@ function App() {
             move: {
                 enable: true,
                 direction: "default",
-                speed: 3,
+                speed: 2,
                 random: false,
                 straight: false,
                 out_mode: "bounce", // default bounce
@@ -255,7 +256,7 @@ function App() {
                 },
             },
             number: {
-                value: 100,
+                value: 150,
                 density: {
                     enable: true,
                     value_area: 800,
@@ -305,7 +306,7 @@ function App() {
             },
             modes: {
                 grab: {
-                    distance: 350,
+                    distance: 300,
                     // links: {
                     //     color: "#ffffff",
                     //     enable: true,
@@ -341,7 +342,7 @@ function App() {
                 },
             },
             number: {
-                value: 200,
+                value: 175,
                 density: {
                     enable: true,
                     value_area: 1000,
@@ -370,6 +371,87 @@ function App() {
         },
         detectRetina: true,
     }
+    const thanksgivingParticles = {
+        background: {
+            // color: {
+            //     // value: "#0e87a1",
+            // },
+        },
+        fpsLimit: 120,
+        interactivity: {
+            events: {
+                resize: true,
+                onClick: {
+                    enable: true,
+                    mode: "push",
+                },
+                onHover: {
+                    enable: true,
+                    mode: "attract",
+                },
+            },
+            modes: {
+                push: {
+                    quantity: 5,
+                },
+                repulse: {
+                    distance: 150,
+                    duration: 0.5,
+                },
+                attract: {
+                    distance: 250,
+                    duration: 0.5,
+                    speed: 5,
+                },
+            },
+        },
+        particles: {
+            color: {
+                value: [
+                    "#8ac75b",
+                    "#f8c726",
+                    "#fbff13",
+                    "ff6600",
+                    "3c6e33",
+                ],
+            },
+            links: {
+                color: "#ffffff",
+                distance: 150,
+                enable: false,
+                opacity: 0.5,
+                width: 1,
+            },
+            move: {
+                enable: true,
+                direction: "right",
+                speed: 3,
+                random: false,
+                straight: false,
+                out_mode: "out", // default bounce
+            },
+            number: {
+                value: 150,
+                density: {
+                    enable: true,
+                    value_area: 800,
+                },
+            },
+            opacity: {
+                value: 0.8,
+            },
+            shape: {
+                // type: "star", // * star, circle, square, polygon
+                type: "triangle",
+            },
+            size: {
+                value: 12,
+                random: true,
+            },
+        },
+        detectRetina: true,
+    }
+
 
     function determineParticles(holiday) {
         switch (holiday) {
@@ -381,6 +463,9 @@ function App() {
                 break;
             case 'Independence Day':
                 setParticles(independenceParticles);
+                break;
+            case 'Thanksgiving':
+                setParticles(thanksgivingParticles);
                 break;
             case 'Valentines Day':
                 setParticles(valentineParticles);

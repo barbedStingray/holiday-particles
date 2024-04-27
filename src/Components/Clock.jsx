@@ -101,11 +101,11 @@ const Clock = ({ holiday, holidate }) => {
           <p className='time'>{timerHours}</p>
         </div>
         <div className='timeBlock'>
-          <p className='unit'>Min.</p>
+          <p className='unit'>Min</p>
           <p className='time'>{timerMinutes}</p>
         </div>
         <div className='timeBlock'>
-          <p className='unit'>Sec'</p>
+          <p className='unit'>Sec</p>
           <p className='time'>{timerSeconds}</p>
         </div>
       </div>
