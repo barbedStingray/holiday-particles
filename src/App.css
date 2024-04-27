@@ -209,17 +209,22 @@
 
 
 @media (max-width: 425px) {
+  .holidayParticles {
+    flex-flow: column-reverse nowrap;
+  }
+  
   .header {
     /* border: 2px solid red; */
-    margin-top: 1vh;
+    margin-top: 5vh;
     gap: 2vw;
     height: 11vh;
+    flex: 1;
+    align-items: flex-start;
   }
   .clock {
     /* border: 2px solid magenta; */
     flex: 1;
-    /* flex: 1; */
-    margin-top: 0vh;  
+    margin-top: 4vh;  
   }
   .holidayTitle {
     /* border: 2px solid blue; */
