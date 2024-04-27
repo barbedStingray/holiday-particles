@@ -266,18 +266,15 @@
   .time {
     /* border: 2px solid white; */
     width: 100%;
-    height: auto;
-    text-align: center;
     font-size: 22vw;
-    /* position: relative; */
-    /* border-radius: 50%;
-    background: radial-gradient(white, 
-      #fff, 35%, #ffffffcc, 55%, 
-      #ffffff99, 75%, #ffffff66, 85%, 
-      #ffffff33, 95%, #ffffff11, 96%,
-      #ffffff01);
-      box-shadow: 0 0 10px white; */
   }
+  .stingrayLogo {
+    /* border: 2px solid gold; */
+    right: 30px;
+    bottom: -10px;
+    z-index: 4;
+  }
+  
   
   
   

@@ -3,7 +3,6 @@ import './App.css';
 import BackgroundParticles from './Components/BackgroundParticles';
 import Header from './Components/Header';
 import Clock from './Components/Clock';
-import StingrayLogo from './Photos/LBlueIcon.png';
 
 function App() {
 
