@@ -48,12 +48,16 @@
 
 .holidayParticles {
   /* background-color: black; */
+  border: 2px solid gold;
   /* position: relative; */
   width: 100dvw;
   height: 100dvh;
   display: flex;
   flex-flow: column nowrap;
   color: white;
+  overflow: hidden;
+  overscroll-behavior: none;
+
 }
 
 .Christmas,
