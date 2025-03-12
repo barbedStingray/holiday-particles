@@ -47,10 +47,10 @@
 }
 
 .holidayParticles {
-  background-color: black;
+  /* background-color: black; */
   /* position: relative; */
-  width: 100vw;
-  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
   display: flex;
   flex-flow: column nowrap;
   color: white;
@@ -273,6 +273,7 @@
     right: 30px;
     bottom: -40px;
     z-index: 4;
+    display: none;
   }
   
   
