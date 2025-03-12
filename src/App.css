@@ -48,7 +48,7 @@
 
 .holidayParticles {
   /* background-color: black; */
-  border: 2px solid gold;
+  border: 2px solid blue;
   /* position: relative; */
   width: 100dvw;
   height: 100dvh;
@@ -57,7 +57,7 @@
   color: white;
   overflow: hidden;
   overscroll-behavior: none;
-
+  touch-action: none;
 }
 
 .Christmas,
